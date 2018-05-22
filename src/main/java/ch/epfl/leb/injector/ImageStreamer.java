@@ -20,6 +20,7 @@
 package ch.epfl.leb.injector;
 
 import java.io.File;
+import java.io.IOException;
 import org.micromanager.Studio;
 import org.micromanager.data.Datastore;
 import org.micromanager.data.Image;
@@ -108,7 +109,7 @@ public class ImageStreamer {
         return store.getNumImages();
     }
     
-    public Image getNextImage() throws InterruptedException {
+    public Image getNextImage() throws InterruptedException, IOException {
         /**
          * Continuously returns references to images from store,
          * (when it comes to the end, it starts over).

@@ -1,3 +1,10 @@
-/nbproject/private/
+/nbproject/
 /build/
 /dist/
+
+# Emacs
+*~
+
+# Maven
+/target
+/nbproject/

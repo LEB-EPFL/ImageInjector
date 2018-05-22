@@ -19,6 +19,7 @@
  */
 package ch.epfl.leb.injector;
 
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.micromanager.PropertyMap;
@@ -77,6 +78,8 @@ public class InjectorProcessor extends Processor {
                 return;
             }
         } catch (InterruptedException ex) {
+            Logger.getLogger(InjectorProcessor.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
             Logger.getLogger(InjectorProcessor.class.getName()).log(Level.SEVERE, null, ex);
         }
         
