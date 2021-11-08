@@ -132,6 +132,11 @@ public class ImageStreamer {
         // Get timestamp for FPS limiter
         lastFrameTimeMs = System.currentTimeMillis();
         // Return image from store
-        return store.getImage(coords_list.get(img_count));
+        try {
+            return store.getImage(coords_list.get(img_count));
+        } catch (Exception e){
+            System.out.println("Image IO error");
+            throw new InterruptedException();
+        }
     }
 }
