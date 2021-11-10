@@ -31,7 +31,7 @@ import org.micromanager.data.ProcessorContext;
  *
  * @author Marcel Stefko
  */
-public class InjectorProcessor extends Processor {
+public class InjectorProcessor implements Processor {
     private final InjectorContext context;
     private final PropertyMap property_map;
     private final ImageStreamer image_streamer;
