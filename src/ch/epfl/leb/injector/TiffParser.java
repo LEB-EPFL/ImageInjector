@@ -157,7 +157,7 @@ public class TiffParser {
         coords_list = new SortedCoordsList();
         
         // Get a coords builder, but scrap all coords info.
-        c_builder = app.data().getCoordsBuilder();
+        c_builder = app.data().coordsBuilder(); // getCoordsBuilder() has been deprecated
         c_builder.channel(0).stagePosition(0).time(0).z(0);
         
         // Get metadata from .tiff file, but scrub the position and other information
